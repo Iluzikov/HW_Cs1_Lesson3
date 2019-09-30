@@ -1,7 +1,7 @@
 ﻿using System;
 
 // а) Дописать структуру Complex, добавив метод вычитания комплексных чисел. Продемонстрировать работу структуры.
-
+//
 // Лузиков Иван
 
 namespace Task_1a
@@ -19,7 +19,7 @@ namespace Task_1a
             Console.WriteLine($"Разность комплексных чисел: ({z1.PrintComplex()}) - ({z2.PrintComplex()}) =  {z3.PrintComplex()}");
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Программа завершена");
+            Console.WriteLine("\nПрограмма завершена");
             Console.ReadKey();
         }
     }

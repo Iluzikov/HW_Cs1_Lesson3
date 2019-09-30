@@ -37,7 +37,7 @@ namespace Task_1b
         /// <returns></returns>
         public static Complex Multiply(Complex Z1, Complex Z2)
         {
-            // z = (a1*a2 - b1*b2) + (a1*b2 + b1*a2)
+            // z = (a1*a2 - b1*b2)+(a1*b2 + b1*a2)
             return new Complex(Z1.a * Z2.a - Z1.b * Z2.b, Z1.a * Z2.b + Z1.b * Z2.a);
         }
 

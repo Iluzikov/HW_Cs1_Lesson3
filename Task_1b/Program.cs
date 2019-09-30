@@ -38,7 +38,7 @@ namespace Task_1b
             }
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Программа завершена");
+            Console.WriteLine("\nПрограмма завершена");
             Console.ReadKey();
         }
     }
