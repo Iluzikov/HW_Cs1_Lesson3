@@ -14,7 +14,6 @@ namespace Task_2
         static void Main(string[] args)
         {
             int sum = 0;
-            // "Сами числа и сумму вывести на экран"
             // Ума не приложу как "Сами числа" можно вывести на экран без использования списка
             List<int> oddNumbersList = new List<int>();
 
