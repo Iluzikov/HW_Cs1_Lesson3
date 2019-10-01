@@ -17,17 +17,30 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            Fractions x1 = new Fractions(1,4);
-            Fractions x2 = new Fractions(1,8);
+            Fractions f1 = new Fractions(5,6);
+            Fractions f2 = new Fractions(2,3);
+            
+            Console.WriteLine("Первое рациональное число: " + f1.PrintF());
+            Console.WriteLine("Второе рациональное число: " + f2.PrintF());
+            Console.WriteLine();
 
-            Console.WriteLine($"{x1.m} / {x1.n}");
-            Console.WriteLine($"{x2.m} / {x2.n}");
+            Fractions fSum = Fractions.Sum(f1,f2);
+            Console.Write($"Результат сложения = {fSum.PrintF()}");
+            fSum.Reduce();
+            Console.WriteLine($" -> упрощение дроби {fSum.PrintF()}");
 
-            Fractions xSum = Fractions.Sum(x1,x2);
-            Console.WriteLine($"Сумма = {xSum.m} / {xSum.n}");
-            Console.WriteLine("НОД = " + Fractions.Nod(xSum.m, xSum.n));
-            Fractions reduce = Fractions.Reduce(xSum);
-            Console.WriteLine($"Сокращение дроби: {reduce.m} / {reduce.n}");
+            Fractions fDifference = Fractions.Difference(f1, f2);
+            fDifference.Reduce();
+            Console.WriteLine($"Результат вычитания = {fDifference.PrintF()}");
+
+            Fractions fMultiply = Fractions.Multiply(f1, f2);
+            fMultiply.Reduce();
+            Console.WriteLine($"Результат умножения = {fMultiply.PrintF()}");
+
+            Fractions fDivision = Fractions.Division(f1, f2);
+            fDivision.Reduce();
+            Console.WriteLine($"Результат деления = {fDivision.PrintF()}");
+            
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\nПрограмма завершена");
